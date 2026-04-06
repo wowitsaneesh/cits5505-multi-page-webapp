@@ -32,3 +32,43 @@ function showCareerGoal() {
     document.getElementById("cv-output").innerHTML = careerGoal;
     console.log("Career goal displayed.");
 }
+
+// Checks the sample quiz answer, shows the result, and stores a simple attempt.
+function gradeSampleQuiz() {
+    let selectedAnswer = "";
+    let options = document.getElementsByName("q1");
+
+    for (let index = 0; index < options.length; index++) {
+        if (options[index].checked) {
+            selectedAnswer = options[index].value;
+        }
+    }
+
+    if (selectedAnswer === "") {
+        document.getElementById("quiz-result").innerHTML = "Please select an answer before checking.";
+        return;
+    }
+
+    let score = 0;
+
+    if (selectedAnswer === "a") {
+        score = 1;
+        document.getElementById("quiz-result").innerHTML = "Correct! Your score is 1 out of 1.";
+    } else {
+        document.getElementById("quiz-result").innerHTML = "Incorrect. Your score is 0 out of 1.";
+    }
+
+    localStorage.setItem("latestQuizScore", score);
+    showQuizHistory();
+}
+
+// Displays the latest stored quiz attempt.
+function showQuizHistory() {
+    let savedScore = localStorage.getItem("latestQuizScore");
+
+    if (savedScore === null) {
+        document.getElementById("quiz-history").innerHTML = "No attempts saved yet.";
+    } else {
+        document.getElementById("quiz-history").innerHTML = "Latest saved attempt: " + savedScore + " out of 1.";
+    }
+}
