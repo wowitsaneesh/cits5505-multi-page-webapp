@@ -2,18 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Web Page</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Aneesh's Web Tutorials</title>
 </head>
 <body>
+    <header>
+        <h1>Aneesh's Web Tutorials</h1>
+        <p>A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
+    </header>
 
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML5 template.</p>
+    <nav>
+        <a href="index.html">Tutorial</a> |
+        <a href="quiz.html">Quiz</a> |
+        <a href="reflection.html">AI Reflection Log</a> |
+        <a href="cv.html">Personalised CV</a>
+    </nav>
 
-    <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                This tutorial introduces the three core technologies used in front-end web development:
+                HTML, CSS, and JavaScript.
+            </p>
+            <p>
+                HTML provides the structure of a web page, CSS controls the appearance, and JavaScript
+                adds behaviour and interactivity.
+            </p>
+        </section>
+
+        <section>
+            <h2>HTML Fundamentals</h2>
+            <p>HTML is used to structure content on a web page.</p>
+            <h3>Example HTML tags</h3>
+            <ul>
+                <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
+                <li><code>&lt;p&gt;</code> for paragraphs</li>
+                <li><code>&lt;a&gt;</code> for links</li>
+                <li><code>&lt;img&gt;</code> for images</li>
+            </ul>
+
+            <h3>Code Example</h3>
+            <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>CSS Fundamentals</h2>
+            <p>CSS is used to control colours, spacing, fonts, layout, and visual style.</p>
+            <ol>
+                <li>CSS can change text colour</li>
+                <li>CSS can set page layout</li>
+                <li>CSS can improve readability and design</li>
+            </ol>
+
+            <h3>Code Example</h3>
+            <pre><code>p {
+    color: blue;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>JavaScript Fundamentals</h2>
+            <p>JavaScript is used to make web pages interactive.</p>
+            <p>It can respond to user actions, update content, and process data.</p>
+
+            <h3>Code Example</h3>
+            <pre><code>alert("Welcome to JavaScript!");</code></pre>
+        </section>
+
+        <section>
+            <h2>Comparison Table</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tr>
+                    <th>Technology</th>
+                    <th>Main Purpose</th>
+                    <th>Example Use</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Structure</td>
+                    <td>Headings, paragraphs, links</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Presentation</td>
+                    <td>Colours, spacing, layout</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Interactivity</td>
+                    <td>Quiz logic, dynamic updates</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Example Image</h2>
+            <img src="images/web-development.jpg" alt="Illustration representing web development" width="300">
+            <p>This image is a placeholder for website-related content.</p>
+        </section>
+
+        <section>
+            <h2>Next Step</h2>
+            <p>Once you finish reading the tutorial, continue to the quiz page.</p>
+            <p><a href="quiz.html">Go to the Quiz Page</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for CITS5505 Multi-Page Web Application Project.</p>
+    </footer>
 </body>
 </html>
