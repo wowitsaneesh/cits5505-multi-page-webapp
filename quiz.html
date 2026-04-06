@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body onload="showQuizHistory()">
+<body onload="showQuizHistory(); loadQuizQuestion();">
     <header id="main-header">
         <div class="container">
             <h1>Quiz Page</h1>
@@ -30,27 +30,18 @@
                 <h2>Quiz Instructions</h2>
                 <ul>
                     <li>This quiz will eventually include at least 10 questions.</li>
-                    <li>Questions will later be loaded dynamically.</li>
-                    <li>Your score and attempt history will later be displayed here.</li>
+                    <li>Questions are now beginning to be loaded from a local file.</li>
+                    <li>Your score and attempt history will be displayed below.</li>
                 </ul>
             </section>
 
             <section class="content-section">
-                <h2>Sample Quiz Layout</h2>
+                <h2>Quiz Question Loaded from a Local File</h2>
+
                 <form id="quiz-form" action="#" method="get">
-                    <fieldset>
-                        <legend>Question 1</legend>
-                        <p>What does HTML stand for?</p>
-
-                        <input type="radio" id="q1a" name="q1" value="a">
-                        <label for="q1a">Hyper Text Markup Language</label><br>
-
-                        <input type="radio" id="q1b" name="q1" value="b">
-                        <label for="q1b">High Tech Modern Language</label><br>
-
-                        <input type="radio" id="q1c" name="q1" value="c">
-                        <label for="q1c">Home Tool Markup Language</label><br>
-                    </fieldset>
+                    <div id="quiz-container">
+                        <p>Loading question...</p>
+                    </div>
 
                     <p>
                         <button type="button" class="btn btn-primary" onclick="gradeSampleQuiz()">
@@ -67,7 +58,8 @@
                 <h2>Current Progress and Future Features</h2>
                 <p>This quiz page can currently do the following:</p>
                 <ol>
-                    <li>Display a sample quiz question</li>
+                    <li>Load one quiz question from a local JSON file using AJAX</li>
+                    <li>Display the loaded question and answer choices on the page</li>
                     <li>Check the selected answer using JavaScript</li>
                     <li>Display the result on the page</li>
                     <li>Save the latest quiz attempt in local storage</li>
@@ -76,12 +68,12 @@
 
                 <p>Later lectures will allow us to add:</p>
                 <ol>
-                    <li>AJAX-based question loading from a local file</li>
-                    <li>Randomised question order</li>
                     <li>Multiple dynamically rendered quiz questions</li>
+                    <li>Randomised question order</li>
                     <li>Automatic percentage and pass/fail calculation</li>
                     <li>Reward content from a public API</li>
                     <li>Full quiz attempt history display</li>
+                    <li>Navigation warning if the user leaves mid-quiz</li>
                 </ol>
             </section>
         </div>
