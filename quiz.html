@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body onload="showQuizHistory()">
     <header id="main-header">
         <div class="container">
             <h1>Quiz Page</h1>
@@ -64,14 +64,24 @@
             </section>
 
             <section class="content-section">
-                <h2>Future Features</h2>
+                <h2>Current Progress and Future Features</h2>
+                <p>This quiz page can currently do the following:</p>
+                <ol>
+                    <li>Display a sample quiz question</li>
+                    <li>Check the selected answer using JavaScript</li>
+                    <li>Display the result on the page</li>
+                    <li>Save the latest quiz attempt in local storage</li>
+                    <li>Show the latest saved attempt when the page loads</li>
+                </ol>
+
                 <p>Later lectures will allow us to add:</p>
                 <ol>
-                    <li>AJAX-based question loading</li>
+                    <li>AJAX-based question loading from a local file</li>
                     <li>Randomised question order</li>
-                    <li>Automatic score calculation</li>
+                    <li>Multiple dynamically rendered quiz questions</li>
+                    <li>Automatic percentage and pass/fail calculation</li>
                     <li>Reward content from a public API</li>
-                    <li>Saved attempt history</li>
+                    <li>Full quiz attempt history display</li>
                 </ol>
             </section>
         </div>
