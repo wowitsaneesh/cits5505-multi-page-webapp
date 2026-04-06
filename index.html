@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aneesh's Web Tutorials</title>
+    <title>Web Learning Hub - Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Aneesh's Web Tutorials</h1>
-        <p>A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
+    <header id="main-header">
+        <h1>Web Learning Hub</h1>
+        <p class="tagline">A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
     </header>
 
     <nav>
-        <a href="index.html">Tutorial</a> |
-        <a href="quiz.html">Quiz</a> |
-        <a href="reflection.html">AI Reflection Log</a> |
+        <a href="index.html">Tutorial</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="reflection.html">AI Reflection Log</a>
         <a href="cv.html">Personalised CV</a>
     </nav>
 
     <main>
-        <section>
+        <section class="content-section">
             <h2>Introduction</h2>
             <p>
                 This tutorial introduces the three core technologies used in front-end web development:
@@ -30,9 +31,10 @@
             </p>
         </section>
 
-        <section>
+        <section class="content-section">
             <h2>HTML Fundamentals</h2>
             <p>HTML is used to structure content on a web page.</p>
+
             <h3>Example HTML tags</h3>
             <ul>
                 <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
@@ -46,7 +48,7 @@
 &lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
         </section>
 
-        <section>
+        <section class="content-section">
             <h2>CSS Fundamentals</h2>
             <p>CSS is used to control colours, spacing, fonts, layout, and visual style.</p>
             <ol>
@@ -61,7 +63,7 @@
 }</code></pre>
         </section>
 
-        <section>
+        <section class="content-section">
             <h2>JavaScript Fundamentals</h2>
             <p>JavaScript is used to make web pages interactive.</p>
             <p>It can respond to user actions, update content, and process data.</p>
@@ -70,9 +72,9 @@
             <pre><code>alert("Welcome to JavaScript!");</code></pre>
         </section>
 
-        <section>
+        <section class="content-section">
             <h2>Comparison Table</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
+            <table>
                 <tr>
                     <th>Technology</th>
                     <th>Main Purpose</th>
@@ -96,16 +98,16 @@
             </table>
         </section>
 
-        <section>
+        <section class="content-section">
             <h2>Example Image</h2>
-            <img src="images/web-development.jpg" alt="Illustration representing web development" width="300">
+            <img src="images/web-development.jpg" alt="Illustration representing web development" class="feature-image">
             <p>This image is a placeholder for website-related content.</p>
         </section>
 
-        <section>
+        <section class="content-section action-section">
             <h2>Next Step</h2>
             <p>Once you finish reading the tutorial, continue to the quiz page.</p>
-            <p><a href="quiz.html">Go to the Quiz Page</a></p>
+            <p><a href="quiz.html" class="button-link">Go to the Quiz Page</a></p>
         </section>
     </main>
 

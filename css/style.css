@@ -1,0 +1,184 @@
+/* General page styling */
+body {
+    background-color: #f4f4f4;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+#main-header {
+    background-color: #1f3c88;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tagline styling */
+.tagline {
+    font-style: italic;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #0f1f4d;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+/* Pseudo-class selector */
+nav a:hover {
+    text-decoration: underline;
+    color: #ffd447;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+}
+
+/* Section box styling */
+.content-section {
+    background-color: white;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Group selector */
+h1, h2, h3 {
+    color: #1f3c88;
+}
+
+/* Keep main header text white */
+#main-header h1,
+#main-header p {
+    color: white;
+}
+
+/* Paragraph readability */
+p {
+    line-height: 1.6;
+}
+
+/* Pseudo-element selector */
+p::first-letter {
+    font-weight: bold;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #999999;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #dbe4ff;
+}
+
+/* Image styling */
+.feature-image,
+.profile-image {
+    border: 2px solid #1f3c88;
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.profile-image {
+    width: 200px;
+}
+
+.feature-image {
+    width: 320px;
+}
+
+/* Button-like link */
+.button-link {
+    background-color: #1f3c88;
+    color: white;
+    padding: 10px 14px;
+    text-decoration: none;
+    border: 1px solid #1f3c88;
+}
+
+.button-link:hover {
+    background-color: #ffd447;
+    color: #1f3c88;
+}
+
+/* Form styling */
+form {
+    background-color: #fafafa;
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+fieldset {
+    border: 1px solid #999999;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #1f3c88;
+}
+
+input[type="submit"] {
+    background-color: #1f3c88;
+    color: white;
+    border: 1px solid #1f3c88;
+    padding: 10px 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffd447;
+    color: #1f3c88;
+}
+
+/* Descendant selector */
+.content-section ul li {
+    margin-bottom: 8px;
+}
+
+/* Direct descendant selector */
+nav > a {
+    display: inline-block;
+}
+
+/* Attribute selector */
+img[alt] {
+    background-color: #f9f9f9;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Footer links */
+footer a {
+    color: #ffd447;
+}
+
+footer a:hover {
+    color: white;
+}
