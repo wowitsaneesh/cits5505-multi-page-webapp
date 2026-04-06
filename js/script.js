@@ -33,7 +33,38 @@ function showCareerGoal() {
     console.log("Career goal displayed.");
 }
 
-// Checks the sample quiz answer, shows the result, and stores a simple attempt.
+// Loads one quiz question from a local JSON file using XMLHttpRequest.
+function loadQuizQuestion() {
+    let request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            let questions = JSON.parse(this.responseText);
+            let question = questions[0];
+
+            let questionHtml = "";
+            questionHtml += "<fieldset>";
+            questionHtml += "<legend>" + question.title + "</legend>";
+            questionHtml += "<p>" + question.question + "</p>";
+
+            for (let index = 0; index < question.options.length; index++) {
+                let option = question.options[index];
+                questionHtml += '<input type="radio" id="q1' + option.value + '" name="q1" value="' + option.value + '">';
+                questionHtml += '<label for="q1' + option.value + '">' + option.text + "</label><br>";
+            }
+
+            questionHtml += "</fieldset>";
+
+            document.getElementById("quiz-container").innerHTML = questionHtml;
+            console.log("Quiz question loaded from local file.");
+        }
+    };
+
+    request.open("GET", "data/questions.json", true);
+    request.send();
+}
+
+// Checks the loaded quiz answer, shows the result, and stores a simple attempt.
 function gradeSampleQuiz() {
     let selectedAnswer = "";
     let options = document.getElementsByName("q1");
