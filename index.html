@@ -2,117 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Learning Hub - Tutorial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header id="main-header">
-        <h1>Web Learning Hub</h1>
-        <p class="tagline">A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
+        <div class="container">
+            <h1>Web Learning Hub</h1>
+            <p class="tagline">A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
+        </div>
     </header>
 
     <nav>
-        <a href="index.html">Tutorial</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="reflection.html">AI Reflection Log</a>
-        <a href="cv.html">Personalised CV</a>
+        <div class="container">
+            <a href="index.html">Tutorial</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="reflection.html">AI Reflection Log</a>
+            <a href="cv.html">Personalised CV</a>
+        </div>
     </nav>
 
     <main>
-        <section class="content-section">
-            <h2>Introduction</h2>
-            <p>
-                This tutorial introduces the three core technologies used in front-end web development:
-                HTML, CSS, and JavaScript.
-            </p>
-            <p>
-                HTML provides the structure of a web page, CSS controls the appearance, and JavaScript
-                adds behaviour and interactivity.
-            </p>
-        </section>
+        <div class="container">
+            <section class="content-section">
+                <h2>Introduction</h2>
+                <p>
+                    This tutorial introduces the three core technologies used in front-end web development:
+                    HTML, CSS, and JavaScript.
+                </p>
+                <p>
+                    HTML provides the structure of a web page, CSS controls the appearance, and JavaScript
+                    adds behaviour and interactivity.
+                </p>
+            </section>
 
-        <section class="content-section">
-            <h2>HTML Fundamentals</h2>
-            <p>HTML is used to structure content on a web page.</p>
+            <section class="content-section">
+                <h2>HTML Fundamentals</h2>
+                <p>HTML is used to structure content on a web page.</p>
 
-            <h3>Example HTML tags</h3>
-            <ul>
-                <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
-                <li><code>&lt;p&gt;</code> for paragraphs</li>
-                <li><code>&lt;a&gt;</code> for links</li>
-                <li><code>&lt;img&gt;</code> for images</li>
-            </ul>
+                <h3>Example HTML tags</h3>
+                <ul>
+                    <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
+                    <li><code>&lt;p&gt;</code> for paragraphs</li>
+                    <li><code>&lt;a&gt;</code> for links</li>
+                    <li><code>&lt;img&gt;</code> for images</li>
+                </ul>
 
-            <h3>Code Example</h3>
-            <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
+                <h3>Code Example</h3>
+                <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
-        </section>
+            </section>
 
-        <section class="content-section">
-            <h2>CSS Fundamentals</h2>
-            <p>CSS is used to control colours, spacing, fonts, layout, and visual style.</p>
-            <ol>
-                <li>CSS can change text colour</li>
-                <li>CSS can set page layout</li>
-                <li>CSS can improve readability and design</li>
-            </ol>
+            <section class="content-section">
+                <h2>CSS Fundamentals</h2>
+                <p>CSS is used to control colours, spacing, fonts, layout, and visual style.</p>
+                <ol>
+                    <li>CSS can change text colour</li>
+                    <li>CSS can set page layout</li>
+                    <li>CSS can improve readability and design</li>
+                </ol>
 
-            <h3>Code Example</h3>
-            <pre><code>p {
+                <h3>Code Example</h3>
+                <pre><code>p {
     color: blue;
 }</code></pre>
-        </section>
+            </section>
 
-        <section class="content-section">
-            <h2>JavaScript Fundamentals</h2>
-            <p>JavaScript is used to make web pages interactive.</p>
-            <p>It can respond to user actions, update content, and process data.</p>
+            <section class="content-section">
+                <h2>JavaScript Fundamentals</h2>
+                <p>JavaScript is used to make web pages interactive.</p>
+                <p>It can respond to user actions, update content, and process data.</p>
 
-            <h3>Code Example</h3>
-            <pre><code>alert("Welcome to JavaScript!");</code></pre>
-        </section>
+                <h3>Code Example</h3>
+                <pre><code>alert("Welcome to JavaScript!");</code></pre>
+            </section>
 
-        <section class="content-section">
-            <h2>Comparison Table</h2>
-            <table>
-                <tr>
-                    <th>Technology</th>
-                    <th>Main Purpose</th>
-                    <th>Example Use</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>Structure</td>
-                    <td>Headings, paragraphs, links</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>Presentation</td>
-                    <td>Colours, spacing, layout</td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Interactivity</td>
-                    <td>Quiz logic, dynamic updates</td>
-                </tr>
-            </table>
-        </section>
+            <section class="content-section">
+                <h2>Comparison Table</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>Technology</th>
+                        <th>Main Purpose</th>
+                        <th>Example Use</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Structure</td>
+                        <td>Headings, paragraphs, links</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Presentation</td>
+                        <td>Colours, spacing, layout</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactivity</td>
+                        <td>Quiz logic, dynamic updates</td>
+                    </tr>
+                </table>
+            </section>
 
-        <section class="content-section">
-            <h2>Example Image</h2>
-            <img src="images/web-development.jpg" alt="Illustration representing web development" class="feature-image">
-            <p>This image is a placeholder for website-related content.</p>
-        </section>
+            <section class="content-section">
+                <h2>Example Image</h2>
+                <img src="images/web-development.jpg" alt="Illustration representing web development" class="feature-image">
+                <p>This image is a placeholder for website-related content.</p>
+            </section>
 
-        <section class="content-section action-section">
-            <h2>Next Step</h2>
-            <p>Once you finish reading the tutorial, continue to the quiz page.</p>
-            <p><a href="quiz.html" class="button-link">Go to the Quiz Page</a></p>
-        </section>
+            <section class="content-section action-section">
+                <h2>Next Step</h2>
+                <p>Once you finish reading the tutorial, continue to the quiz page.</p>
+                <p>
+                    <a href="quiz.html" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span> Go to the Quiz Page
+                    </a>
+                </p>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>Created for CITS5505 Multi-Page Web Application Project.</p>
+        <div class="container">
+            <p>Created for CITS5505 Multi-Page Web Application Project.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
