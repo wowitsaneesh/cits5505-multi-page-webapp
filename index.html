@@ -111,6 +111,31 @@
                 <p>This image is a placeholder for website-related content.</p>
             </section>
 
+            <section class="content-section">
+                <h2>Interactive JavaScript Demo</h2>
+                <p>Click the buttons below to see simple JavaScript actions in the browser.</p>
+
+                <p>
+                    <button type="button" class="btn btn-default" onclick="showWelcomeMessage()">
+                        Show Welcome Message
+                    </button>
+                </p>
+
+                <p>
+                    <button type="button" class="btn btn-default" onclick="askVisitorName()">
+                        Enter Your Name
+                    </button>
+                </p>
+
+                <p>
+                    <button type="button" class="btn btn-default" onclick="showAdditionResult()">
+                        Show Simple Calculation
+                    </button>
+                </p>
+
+                <p id="demo-output">Your result will appear here.</p>
+            </section>
+
             <section class="content-section action-section">
                 <h2>Next Step</h2>
                 <p>Once you finish reading the tutorial, continue to the quiz page.</p>
@@ -129,6 +154,7 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
