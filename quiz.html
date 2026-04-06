@@ -37,7 +37,7 @@
 
             <section class="content-section">
                 <h2>Sample Quiz Layout</h2>
-                <form action="#" method="get">
+                <form id="quiz-form" action="#" method="get">
                     <fieldset>
                         <legend>Question 1</legend>
                         <p>What does HTML stand for?</p>
@@ -53,9 +53,14 @@
                     </fieldset>
 
                     <p>
-                        <input type="submit" value="Submit Quiz">
+                        <button type="button" class="btn btn-primary" onclick="gradeSampleQuiz()">
+                            Check My Answer
+                        </button>
                     </p>
                 </form>
+
+                <p id="quiz-result">Your result will appear here.</p>
+                <p id="quiz-history">No attempts saved yet.</p>
             </section>
 
             <section class="content-section">
@@ -78,6 +83,7 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
