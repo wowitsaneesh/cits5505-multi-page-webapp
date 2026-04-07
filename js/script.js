@@ -233,3 +233,13 @@ function showQuizHistory() {
         document.getElementById("quiz-history").innerHTML = historyHtml;
     }
 }
+
+// Clears all saved quiz attempts from local storage.
+function clearQuizHistory() {
+    let userConfirmed = confirm("Are you sure you want to clear all previous attempts?");
+
+    if (userConfirmed) {
+        localStorage.removeItem("quizAttempts");
+        document.getElementById("quiz-history").innerHTML = "No attempts saved yet.";
+    }
+}
