@@ -1,3 +1,6 @@
+// Stores the loaded quiz questions for use during grading.
+let loadedQuestions = [];
+
 // Displays a simple message to the user.
 function showWelcomeMessage() {
     alert("Welcome! JavaScript can respond to button clicks and interact with the user.");
@@ -27,36 +30,57 @@ function showAdditionResult() {
     console.log("Calculation result shown: " + total);
 }
 
+// Displays a simple career goal message on the CV page.
 function showCareerGoal() {
     let careerGoal = "My career goal is to become a skilled web developer who builds useful and user-friendly websites.";
     document.getElementById("cv-output").innerHTML = careerGoal;
     console.log("Career goal displayed.");
 }
 
-// Loads one quiz question from a local JSON file using XMLHttpRequest.
+// Randomises the order of questions in the array.
+function shuffleQuestions(questionArray) {
+    for (let index = questionArray.length - 1; index > 0; index--) {
+        let randomIndex = Math.floor(Math.random() * (index + 1));
+        let temporaryValue = questionArray[index];
+        questionArray[index] = questionArray[randomIndex];
+        questionArray[randomIndex] = temporaryValue;
+    }
+}
+
+// Loads all quiz questions from the local JSON file using XMLHttpRequest.
 function loadQuizQuestion() {
     let request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let questions = JSON.parse(this.responseText);
-            let question = questions[0];
+
+            shuffleQuestions(questions);
+            loadedQuestions = questions;
 
             let questionHtml = "";
-            questionHtml += "<fieldset>";
-            questionHtml += "<legend>" + question.title + "</legend>";
-            questionHtml += "<p>" + question.question + "</p>";
 
-            for (let index = 0; index < question.options.length; index++) {
-                let option = question.options[index];
-                questionHtml += '<input type="radio" id="q1' + option.value + '" name="q1" value="' + option.value + '">';
-                questionHtml += '<label for="q1' + option.value + '">' + option.text + "</label><br>";
+            for (let questionIndex = 0; questionIndex < loadedQuestions.length; questionIndex++) {
+                let question = loadedQuestions[questionIndex];
+                let questionNumber = questionIndex + 1;
+
+                questionHtml += "<fieldset>";
+                questionHtml += "<legend>" + question.title + "</legend>";
+                questionHtml += "<p>" + question.question + "</p>";
+
+                for (let optionIndex = 0; optionIndex < question.options.length; optionIndex++) {
+                    let option = question.options[optionIndex];
+                    let inputId = "q" + questionNumber + option.value;
+
+                    questionHtml += '<input type="radio" id="' + inputId + '" name="q' + questionNumber + '" value="' + option.value + '">';
+                    questionHtml += '<label for="' + inputId + '">' + option.text + "</label><br>";
+                }
+
+                questionHtml += "</fieldset><br>";
             }
 
-            questionHtml += "</fieldset>";
-
             document.getElementById("quiz-container").innerHTML = questionHtml;
-            console.log("Quiz question loaded from local file.");
+            console.log("Quiz questions loaded from local file.");
         }
     };
 
@@ -64,42 +88,87 @@ function loadQuizQuestion() {
     request.send();
 }
 
-// Checks the loaded quiz answer, shows the result, and stores a simple attempt.
+// Grades all rendered quiz questions, calculates percentage and pass/fail, and stores the attempt.
 function gradeSampleQuiz() {
-    let selectedAnswer = "";
-    let options = document.getElementsByName("q1");
+    let score = 0;
+    let answeredQuestions = 0;
 
-    for (let index = 0; index < options.length; index++) {
-        if (options[index].checked) {
-            selectedAnswer = options[index].value;
+    for (let questionIndex = 0; questionIndex < loadedQuestions.length; questionIndex++) {
+        let questionNumber = questionIndex + 1;
+        let selectedAnswer = "";
+        let options = document.getElementsByName("q" + questionNumber);
+
+        for (let optionIndex = 0; optionIndex < options.length; optionIndex++) {
+            if (options[optionIndex].checked) {
+                selectedAnswer = options[optionIndex].value;
+            }
+        }
+
+        if (selectedAnswer !== "") {
+            answeredQuestions += 1;
+        }
+
+        if (selectedAnswer === loadedQuestions[questionIndex].correctAnswer) {
+            score += 1;
         }
     }
 
-    if (selectedAnswer === "") {
-        document.getElementById("quiz-result").innerHTML = "Please select an answer before checking.";
+    if (answeredQuestions < loadedQuestions.length) {
+        document.getElementById("quiz-result").innerHTML = "Please answer all questions before submitting the quiz.";
         return;
     }
 
-    let score = 0;
+    let totalQuestions = loadedQuestions.length;
+    let percentage = (score / totalQuestions) * 100;
+    let passMark = 70;
+    let resultText = "";
 
-    if (selectedAnswer === "a") {
-        score = 1;
-        document.getElementById("quiz-result").innerHTML = "Correct! Your score is 1 out of 1.";
+    if (percentage >= passMark) {
+        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You passed!";
     } else {
-        document.getElementById("quiz-result").innerHTML = "Incorrect. Your score is 0 out of 1.";
+        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You did not pass.";
     }
 
-    localStorage.setItem("latestQuizScore", score);
+    document.getElementById("quiz-result").innerHTML = resultText;
+
+    let attempts = localStorage.getItem("quizAttempts");
+    let attemptList = [];
+
+    if (attempts !== null) {
+        attemptList = JSON.parse(attempts);
+    }
+
+    let attempt = {
+        score: score,
+        total: totalQuestions,
+        percentage: percentage.toFixed(0),
+        date: new Date().toLocaleString()
+    };
+
+    attemptList.push(attempt);
+    localStorage.setItem("quizAttempts", JSON.stringify(attemptList));
+
     showQuizHistory();
 }
 
-// Displays the latest stored quiz attempt.
+// Displays all saved quiz attempts from local storage.
 function showQuizHistory() {
-    let savedScore = localStorage.getItem("latestQuizScore");
+    let savedAttempts = localStorage.getItem("quizAttempts");
 
-    if (savedScore === null) {
+    if (savedAttempts === null) {
         document.getElementById("quiz-history").innerHTML = "No attempts saved yet.";
     } else {
-        document.getElementById("quiz-history").innerHTML = "Latest saved attempt: " + savedScore + " out of 1.";
+        let attemptList = JSON.parse(savedAttempts);
+        let historyHtml = "<strong>Previous Attempts:</strong><br>";
+
+        for (let index = 0; index < attemptList.length; index++) {
+            let attempt = attemptList[index];
+            historyHtml += "Attempt " + (index + 1) + ": ";
+            historyHtml += attempt.score + " out of " + attempt.total;
+            historyHtml += " (" + attempt.percentage + "%)";
+            historyHtml += " - " + attempt.date + "<br>";
+        }
+
+        document.getElementById("quiz-history").innerHTML = historyHtml;
     }
 }
