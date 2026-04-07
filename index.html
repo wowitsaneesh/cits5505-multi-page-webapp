@@ -11,7 +11,7 @@
     <header id="main-header">
         <div class="container">
             <h1>Web Learning Hub</h1>
-            <p class="tagline">A simple learning website for HTML, CSS, and JavaScript fundamentals.</p>
+            <p class="tagline">A tutorial website for learning the fundamentals of HTML, CSS, and JavaScript.</p>
         </div>
     </header>
 
@@ -30,53 +30,105 @@
                 <h2>Introduction</h2>
                 <p>
                     This tutorial introduces the three core technologies used in front-end web development:
-                    HTML, CSS, and JavaScript.
+                    HTML, CSS, and JavaScript. Together, these technologies allow developers to create websites
+                    that are structured properly, visually clear, and interactive for users.
                 </p>
                 <p>
-                    HTML provides the structure of a web page, CSS controls the appearance, and JavaScript
-                    adds behaviour and interactivity.
+                    HTML provides the structure and meaning of the content on a webpage. CSS controls how that
+                    content looks, including layout, colour, spacing, and fonts. JavaScript adds behaviour and
+                    interactivity, allowing pages to respond to user actions and update dynamically in the browser.
+                </p>
+                <p>
+                    A successful webpage normally requires all three technologies to work together. For example,
+                    a quiz page may use HTML to define the form, CSS to improve the presentation, and JavaScript
+                    to check answers, calculate scores, and update the displayed result.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>HTML Fundamentals</h2>
-                <p>HTML is used to structure content on a web page.</p>
+                <p>
+                    HTML stands for Hyper Text Markup Language. It is used to structure content on a webpage so
+                    the browser knows what each part of the page represents. HTML is not mainly responsible for
+                    appearance or behaviour. Instead, it provides the backbone of the page.
+                </p>
 
-                <h3>Example HTML tags</h3>
+                <h3>Common HTML Tags</h3>
                 <ul>
                     <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
                     <li><code>&lt;p&gt;</code> for paragraphs</li>
-                    <li><code>&lt;a&gt;</code> for links</li>
+                    <li><code>&lt;a&gt;</code> for hyperlinks</li>
                     <li><code>&lt;img&gt;</code> for images</li>
+                    <li><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> for lists</li>
+                    <li><code>&lt;form&gt;</code> and <code>&lt;input&gt;</code> for forms</li>
                 </ul>
 
-                <h3>Code Example</h3>
-                <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+                <h3>Example HTML Code</h3>
+                <pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;p&gt;This is a paragraph on the page.&lt;/p&gt;
+&lt;a href="quiz.html"&gt;Go to the quiz&lt;/a&gt;</code></pre>
+
+                <p>
+                    In the example above, the heading gives the page a clear title, the paragraph presents
+                    information, and the hyperlink allows the user to move to another page. This shows how
+                    HTML connects structure and navigation.
+                </p>
             </section>
 
             <section class="content-section">
                 <h2>CSS Fundamentals</h2>
-                <p>CSS is used to control colours, spacing, fonts, layout, and visual style.</p>
+                <p>
+                    CSS stands for Cascading Style Sheets. It is used to control the appearance of a webpage.
+                    While HTML gives the page structure, CSS makes the page visually appealing and easier to read.
+                </p>
+
+                <h3>What CSS Can Control</h3>
                 <ol>
-                    <li>CSS can change text colour</li>
-                    <li>CSS can set page layout</li>
-                    <li>CSS can improve readability and design</li>
+                    <li>Text colour and background colour</li>
+                    <li>Spacing, margins, and padding</li>
+                    <li>Font size and style</li>
+                    <li>Page layout and positioning</li>
+                    <li>Responsive presentation across different screen sizes</li>
                 </ol>
 
-                <h3>Code Example</h3>
+                <h3>Example CSS Code</h3>
                 <pre><code>p {
     color: blue;
+    font-size: 18px;
 }</code></pre>
+
+                <p>
+                    This CSS rule applies styling to all paragraph elements. It changes the text colour to blue
+                    and increases the font size. CSS works by selecting HTML elements and applying style rules
+                    to them.
+                </p>
             </section>
 
             <section class="content-section">
                 <h2>JavaScript Fundamentals</h2>
-                <p>JavaScript is used to make web pages interactive.</p>
-                <p>It can respond to user actions, update content, and process data.</p>
+                <p>
+                    JavaScript is used to add behaviour and interactivity to webpages. It allows the page to
+                    respond when a user clicks a button, enters text, submits a form, or loads the page. It can
+                    also change the content of the page without needing to reload it fully.
+                </p>
 
-                <h3>Code Example</h3>
+                <h3>Common Uses of JavaScript</h3>
+                <ul>
+                    <li>Showing messages and alerts</li>
+                    <li>Reading user input</li>
+                    <li>Changing text on the page dynamically</li>
+                    <li>Checking quiz answers</li>
+                    <li>Loading data from a file or API</li>
+                </ul>
+
+                <h3>Example JavaScript Code</h3>
                 <pre><code>alert("Welcome to JavaScript!");</code></pre>
+
+                <p>
+                    This example shows a simple JavaScript instruction that displays a popup message to the user.
+                    JavaScript can be much more powerful than this, but even basic commands help demonstrate how
+                    a webpage can become interactive instead of remaining static.
+                </p>
             </section>
 
             <section class="content-section">
@@ -90,17 +142,17 @@
                     <tr>
                         <td>HTML</td>
                         <td>Structure</td>
-                        <td>Headings, paragraphs, links</td>
+                        <td>Headings, paragraphs, links, forms</td>
                     </tr>
                     <tr>
                         <td>CSS</td>
                         <td>Presentation</td>
-                        <td>Colours, spacing, layout</td>
+                        <td>Colours, spacing, fonts, layout</td>
                     </tr>
                     <tr>
                         <td>JavaScript</td>
                         <td>Interactivity</td>
-                        <td>Quiz logic, dynamic updates</td>
+                        <td>Quiz logic, dynamic updates, browser responses</td>
                     </tr>
                 </table>
             </section>
@@ -108,12 +160,19 @@
             <section class="content-section">
                 <h2>Example Image</h2>
                 <img src="images/web-development.jpg" alt="Illustration representing web development" class="feature-image">
-                <p>This image is a placeholder for website-related content.</p>
+                <p>
+                    This image is included as a simple example of how visual content can be added to a webpage
+                    using HTML. Images often help improve presentation and make content more engaging for users.
+                </p>
             </section>
 
             <section class="content-section">
                 <h2>Interactive JavaScript Demo</h2>
-                <p>Click the buttons below to see simple JavaScript actions in the browser.</p>
+                <p>
+                    The buttons below demonstrate how JavaScript can respond to user actions in the browser.
+                    These examples show simple interactions such as displaying a welcome message, collecting
+                    input from the user, and performing a basic calculation.
+                </p>
 
                 <p>
                     <button type="button" class="btn btn-default" onclick="showWelcomeMessage()">
@@ -138,7 +197,10 @@
 
             <section class="content-section action-section">
                 <h2>Next Step</h2>
-                <p>Once you finish reading the tutorial, continue to the quiz page.</p>
+                <p>
+                    Once you finish reading the tutorial and reviewing the examples, you can move directly to the
+                    quiz page to test your understanding of HTML, CSS, and JavaScript.
+                </p>
                 <p>
                     <a href="quiz.html" class="btn btn-primary">
                         <span class="glyphicon glyphicon-pencil"></span> Go to the Quiz Page

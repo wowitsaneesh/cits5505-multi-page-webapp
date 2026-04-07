@@ -108,6 +108,25 @@ function loadQuizQuestion() {
     request.send();
 }
 
+// Fetches reward content from a public API if the user passes.
+function fetchRewardContent() {
+    fetch("https://api.adviceslip.com/advice?timestamp=" + new Date().getTime())
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            let adviceText = data.slip.advice;
+            document.getElementById("quiz-reward").innerHTML =
+                "Reward unlocked: " + adviceText;
+            console.log("Reward content loaded from public API.");
+        })
+        .catch(function () {
+            document.getElementById("quiz-reward").innerHTML =
+                "Reward unlocked, but the advice could not be loaded right now.";
+            console.log("Reward API request failed.");
+        });
+}
+
 // Grades all rendered quiz questions, calculates percentage and pass/fail, and stores the attempt.
 function gradeSampleQuiz() {
     let score = 0;
@@ -135,6 +154,7 @@ function gradeSampleQuiz() {
 
     if (answeredQuestions < loadedQuestions.length) {
         document.getElementById("quiz-result").innerHTML = "Please answer all questions before submitting the quiz.";
+        document.getElementById("quiz-reward").innerHTML = "Reward content will appear here if you pass.";
         return;
     }
 
@@ -145,8 +165,10 @@ function gradeSampleQuiz() {
 
     if (percentage >= passMark) {
         resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You passed!";
+        fetchRewardContent();
     } else {
         resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You did not pass.";
+        document.getElementById("quiz-reward").innerHTML = "No reward this time. Try again to pass the quiz.";
     }
 
     document.getElementById("quiz-result").innerHTML = resultText;
