@@ -1,6 +1,12 @@
 // Stores the loaded quiz questions for use during grading.
 let loadedQuestions = [];
 
+// Tracks whether the user has started the quiz.
+let quizStarted = false;
+
+// Tracks whether the quiz has been successfully submitted.
+let quizSubmitted = false;
+
 // Displays a simple message to the user.
 function showWelcomeMessage() {
     alert("Welcome! JavaScript can respond to button clicks and interact with the user.");
@@ -47,6 +53,20 @@ function shuffleQuestions(questionArray) {
     }
 }
 
+// Marks the quiz as started once the user selects an answer.
+function markQuizStarted() {
+    if (!quizSubmitted) {
+        quizStarted = true;
+    }
+}
+
+// Warns the user if they try to leave after starting but before submitting.
+window.onbeforeunload = function () {
+    if (quizStarted && !quizSubmitted) {
+        return "You have started the quiz but not submitted it yet.";
+    }
+};
+
 // Loads all quiz questions from the local JSON file using XMLHttpRequest.
 function loadQuizQuestion() {
     let request = new XMLHttpRequest();
@@ -72,7 +92,7 @@ function loadQuizQuestion() {
                     let option = question.options[optionIndex];
                     let inputId = "q" + questionNumber + option.value;
 
-                    questionHtml += '<input type="radio" id="' + inputId + '" name="q' + questionNumber + '" value="' + option.value + '">';
+                    questionHtml += '<input type="radio" id="' + inputId + '" name="q' + questionNumber + '" value="' + option.value + '" onclick="markQuizStarted()">';
                     questionHtml += '<label for="' + inputId + '">' + option.text + "</label><br>";
                 }
 
@@ -147,6 +167,10 @@ function gradeSampleQuiz() {
 
     attemptList.push(attempt);
     localStorage.setItem("quizAttempts", JSON.stringify(attemptList));
+
+    quizSubmitted = true;
+    quizStarted = false;
+    window.onbeforeunload = null;
 
     showQuizHistory();
 }
