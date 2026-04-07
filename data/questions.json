@@ -4,18 +4,109 @@
         "question": "What does HTML stand for?",
         "correctAnswer": "a",
         "options": [
-            {
-                "value": "a",
-                "text": "Hyper Text Markup Language"
-            },
-            {
-                "value": "b",
-                "text": "High Tech Modern Language"
-            },
-            {
-                "value": "c",
-                "text": "Home Tool Markup Language"
-            }
+            { "value": "a", "text": "Hyper Text Markup Language" },
+            { "value": "b", "text": "High Tech Modern Language" },
+            { "value": "c", "text": "Home Tool Markup Language" },
+            { "value": "d", "text": "Hyper Transfer Machine Language" }
+        ]
+    },
+    {
+        "title": "Question 2",
+        "question": "Which HTML tag is used to create a paragraph?",
+        "correctAnswer": "b",
+        "options": [
+            { "value": "a", "text": "<h1>" },
+            { "value": "b", "text": "<p>" },
+            { "value": "c", "text": "<div>" },
+            { "value": "d", "text": "<span>" }
+        ]
+    },
+    {
+        "title": "Question 3",
+        "question": "Which HTML tag is used to insert an image into a webpage?",
+        "correctAnswer": "c",
+        "options": [
+            { "value": "a", "text": "<picture>" },
+            { "value": "b", "text": "<image>" },
+            { "value": "c", "text": "<img>" },
+            { "value": "d", "text": "<src>" }
+        ]
+    },
+    {
+        "title": "Question 4",
+        "question": "Which HTML element is used to create a hyperlink?",
+        "correctAnswer": "d",
+        "options": [
+            { "value": "a", "text": "<link>" },
+            { "value": "b", "text": "<href>" },
+            { "value": "c", "text": "<nav>" },
+            { "value": "d", "text": "<a>" }
+        ]
+    },
+    {
+        "title": "Question 5",
+        "question": "What is the main purpose of CSS?",
+        "correctAnswer": "a",
+        "options": [
+            { "value": "a", "text": "To control the style and appearance of a webpage" },
+            { "value": "b", "text": "To store data in the browser" },
+            { "value": "c", "text": "To create server-side logic" },
+            { "value": "d", "text": "To define webpage structure only" }
+        ]
+    },
+    {
+        "title": "Question 6",
+        "question": "Which CSS selector is used to target an element with id='main-header'?",
+        "correctAnswer": "b",
+        "options": [
+            { "value": "a", "text": ".main-header" },
+            { "value": "b", "text": "#main-header" },
+            { "value": "c", "text": "main-header" },
+            { "value": "d", "text": "*main-header" }
+        ]
+    },
+    {
+        "title": "Question 7",
+        "question": "Which CSS class is commonly used in Bootstrap to center page content and provide responsive spacing?",
+        "correctAnswer": "c",
+        "options": [
+            { "value": "a", "text": ".row" },
+            { "value": "b", "text": ".col-md-6" },
+            { "value": "c", "text": ".container" },
+            { "value": "d", "text": ".table" }
+        ]
+    },
+    {
+        "title": "Question 8",
+        "question": "What is JavaScript mainly used for in a webpage?",
+        "correctAnswer": "d",
+        "options": [
+            { "value": "a", "text": "Only styling text and colours" },
+            { "value": "b", "text": "Only structuring page headings" },
+            { "value": "c", "text": "Only storing images" },
+            { "value": "d", "text": "Adding behaviour and interactivity" }
+        ]
+    },
+    {
+        "title": "Question 9",
+        "question": "Which JavaScript function can ask the user to type in some input?",
+        "correctAnswer": "a",
+        "options": [
+            { "value": "a", "text": "prompt()" },
+            { "value": "b", "text": "alert()" },
+            { "value": "c", "text": "console.log()" },
+            { "value": "d", "text": "confirm()" }
+        ]
+    },
+    {
+        "title": "Question 10",
+        "question": "Which browser storage feature can be used to save quiz attempts on the client side?",
+        "correctAnswer": "b",
+        "options": [
+            { "value": "a", "text": "document.title" },
+            { "value": "b", "text": "localStorage" },
+            { "value": "c", "text": "innerHTML" },
+            { "value": "d", "text": "navigator" }
         ]
     }
 ]
