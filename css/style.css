@@ -2,197 +2,306 @@
     box-sizing: border-box;
 }
 
-/* General page styling */
+/* Page background and typography */
 body {
-    background-color: #f5f7fb;
-    color: #222222;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom, #eef3f9, #f8fafc);
+    color: #1f2937;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Header styling */
+/* Header */
 #main-header {
-    background-color: #1f3c5a;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 50px 0 40px 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* Tagline styling */
+#main-header h1,
+#main-header p {
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+#main-header h1 {
+    font-size: 40px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+}
+
 .tagline {
+    font-size: 18px;
+    opacity: 0.95;
     font-style: italic;
 }
 
-/* Navigation styling */
+/* Navigation */
 nav {
-    background-color: #16324a;
-    padding: 14px 20px;
+    background-color: #0f172a;
+    padding: 14px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+nav .container {
     text-align: center;
 }
 
 nav a {
-    color: white;
+    color: #f8fafc;
     text-decoration: none;
-    margin: 0 16px;
+    margin: 0 18px;
     font-weight: 600;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Pseudo-class selector */
 nav a:hover {
-    text-decoration: underline;
-    color: #ffd447;
+    color: #93c5fd;
+    transform: translateY(-1px);
+    text-decoration: none;
 }
 
-/* Main content area */
+/* Main layout */
 main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0;
 }
 
-/* Section box styling */
+/* Content cards */
 .content-section {
-    background-color: white;
-    margin-bottom: 24px;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
     border: none;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
-/* Group selector */
+/* Headings */
 h1, h2, h3 {
-    color: #1f3c88;
+    margin-top: 0;
 }
 
-/* Keep main header text white */
-#main-header h1,
-#main-header p {
-    color: white;
+h2 {
+    color: #1d4ed8;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
-/* Paragraph readability */
+h3 {
+    color: #334155;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs and lists */
 p {
-    line-height: 1.6;
+    margin-bottom: 14px;
+    font-family: Verdana, Arial, sans-serif;
 }
 
-/* Pseudo-element selector */
-p::first-letter {
-    font-weight: bold;
+ul, ol {
+    padding-left: 22px;
+    font-family: Verdana, Arial, sans-serif;
 }
 
-/* Table styling */
+li {
+    margin-bottom: 8px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* Code blocks */
+code {
+    background-color: #eff6ff;
+    color: #1e40af;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+pre {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #1e293b;
+}
+
+pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* Tables */
 table {
     width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: Verdana, Arial, sans-serif;
 }
 
 th, td {
-    border: 1px solid #999999;
-    padding: 10px;
-    text-align: left;
+    vertical-align: middle !important;
 }
 
-th {
-    background-color: #dbe4ff;
-}
-
-/* Image styling */
+/* Images */
 .feature-image,
 .profile-image {
-    border: 2px solid #1f3c88;
     display: block;
-    margin-top: 10px;
     max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 3px solid #dbeafe;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    margin: 14px auto 10px auto;
 }
 
 .profile-image {
-    width: 200px;
+    width: 220px;
 }
 
 .feature-image {
-    width: 320px;
+    width: 360px;
 }
 
-/* Button-like link */
-.button-link,
-input[type="submit"] {
-    display: inline-block;
-    background-color: #2c6e91;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button-link:hover,
-input[type="submit"]:hover {
-    background-color: #1f5a78;
-    color: white;
-}
-
-/* Form styling */
+/* Forms */
 form {
-    background-color: #fafafa;
-    border: 1px solid #cccccc;
-    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 20px;
 }
 
 fieldset {
-    border: 1px solid #999999;
-    padding: 15px;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+    background: #ffffff;
 }
 
 legend {
-    font-weight: bold;
-    color: #1f3c88;
-}
-
-input[type="submit"] {
-    background-color: #1f3c88;
-    color: white;
-    border: 1px solid #1f3c88;
-    padding: 10px 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #ffd447;
-    color: #1f3c88;
-}
-
-/* Descendant selector */
-.content-section ul li {
+    width: auto;
+    border: none;
     margin-bottom: 8px;
+    padding: 0 8px;
+    color: #1d4ed8;
+    font-weight: 700;
+    font-size: 18px;
 }
 
-/* Direct descendant selector */
-nav > a {
+/* Make quiz options square instead of circular */
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #555555;
+    border-radius: 0;
+    background-color: white;
+    cursor: pointer;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+/* Show a filled square when selected */
+input[type="radio"]:checked {
+    background-color: #1d4ed8;
+}
+
+/* Add spacing between the square and the option text */
+input[type="radio"] + label {
+    margin-left: 8px;
+    vertical-align: middle;
+    font-weight: normal;
     display: inline-block;
 }
 
-/* Attribute selector */
-img[alt] {
-    background-color: #f9f9f9;
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Footer styling */
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+.btn-default {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #1f2937;
+}
+
+.btn-default:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+/* Output/result boxes */
+#demo-output,
+#cv-output,
+#quiz-result,
+#quiz-reward,
+#quiz-history {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-top: 14px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Footer */
 footer {
-    background-color: #1f3c88;
+    background: #0f172a;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 18px 0;
+    margin-top: 20px;
 }
 
-/* Footer links */
+footer p {
+    margin: 0;
+}
+
 footer a {
-    color: #ffd447;
+    color: #93c5fd;
 }
 
 footer a:hover {
     color: white;
+    text-decoration: none;
+}
+
+/* Make all quiz questions and options use Verdana */
+#quiz-container,
+#quiz-container p,
+#quiz-container label,
+#quiz-container legend {
+    font-family: Verdana, Arial, sans-serif;
 }

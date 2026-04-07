@@ -85,7 +85,7 @@ function loadQuizQuestion() {
                 let questionNumber = questionIndex + 1;
 
                 questionHtml += "<fieldset>";
-                questionHtml += "<legend>" + question.title + "</legend>";
+                questionHtml += "<legend>Question " + questionNumber + "</legend>";
                 questionHtml += "<p>" + question.question + "</p>";
 
                 for (let optionIndex = 0; optionIndex < question.options.length; optionIndex++) {
@@ -93,7 +93,22 @@ function loadQuizQuestion() {
                     let inputId = "q" + questionNumber + option.value;
 
                     questionHtml += '<input type="radio" id="' + inputId + '" name="q' + questionNumber + '" value="' + option.value + '" onclick="markQuizStarted()">';
-                    questionHtml += '<label for="' + inputId + '">' + option.text + "</label><br>";
+                    
+                    let optionText = option.text;
+
+                    if (
+                        (optionText.indexOf("&lt;") !== -1 && optionText.indexOf("&gt;") !== -1) ||
+                        optionText.indexOf(".") !== -1 ||
+                        optionText.indexOf("#") !== -1 ||
+                        optionText.indexOf("(") !== -1 ||
+                        optionText === "localStorage" ||
+                        optionText === "innerHTML" ||
+                        optionText === "navigator"
+                    ) {
+                        optionText = "<code>" + optionText + "</code>";
+                    }
+
+                    questionHtml += '<label for="' + inputId + '">' + optionText + "</label><br>";
                 }
 
                 questionHtml += "</fieldset><br>";
