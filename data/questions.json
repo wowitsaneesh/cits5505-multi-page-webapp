@@ -15,10 +15,10 @@
         "question": "Which HTML tag is used to create a paragraph?",
         "correctAnswer": "b",
         "options": [
-            { "value": "a", "text": "<h1>" },
-            { "value": "b", "text": "<p>" },
-            { "value": "c", "text": "<div>" },
-            { "value": "d", "text": "<span>" }
+            { "value": "a", "text": "&lt;h1&gt;" },
+            { "value": "b", "text": "&lt;p&gt;" },
+            { "value": "c", "text": "&lt;div&gt;" },
+            { "value": "d", "text": "&lt;span&gt;" }
         ]
     },
     {
@@ -26,10 +26,10 @@
         "question": "Which HTML tag is used to insert an image into a webpage?",
         "correctAnswer": "c",
         "options": [
-            { "value": "a", "text": "<picture>" },
-            { "value": "b", "text": "<image>" },
-            { "value": "c", "text": "<img>" },
-            { "value": "d", "text": "<src>" }
+            { "value": "a", "text": "&lt;picture&gt;" },
+            { "value": "b", "text": "&lt;image&gt;" },
+            { "value": "c", "text": "&lt;img&gt;" },
+            { "value": "d", "text": "&lt;src&gt;" }
         ]
     },
     {
@@ -37,10 +37,10 @@
         "question": "Which HTML element is used to create a hyperlink?",
         "correctAnswer": "d",
         "options": [
-            { "value": "a", "text": "<link>" },
-            { "value": "b", "text": "<href>" },
-            { "value": "c", "text": "<nav>" },
-            { "value": "d", "text": "<a>" }
+            { "value": "a", "text": "&lt;link&gt;" },
+            { "value": "b", "text": "&lt;href&gt;" },
+            { "value": "c", "text": "&lt;nav&gt;" },
+            { "value": "d", "text": "&lt;a&gt;" }
         ]
     },
     {
