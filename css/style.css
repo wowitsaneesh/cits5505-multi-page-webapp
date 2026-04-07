@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 /* General page styling */
 body {
-    background-color: #f4f4f4;
+    background-color: #f5f7fb;
     color: #222222;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,9 +13,9 @@ body {
 
 /* Header styling */
 #main-header {
-    background-color: #1f3c88;
+    background-color: #1f3c5a;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -22,16 +26,16 @@ body {
 
 /* Navigation styling */
 nav {
-    background-color: #0f1f4d;
-    padding: 12px;
+    background-color: #16324a;
+    padding: 14px 20px;
     text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+    margin: 0 16px;
+    font-weight: 600;
 }
 
 /* Pseudo-class selector */
@@ -42,15 +46,19 @@ nav a:hover {
 
 /* Main content area */
 main {
-    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 /* Section box styling */
 .content-section {
     background-color: white;
-    border: 1px solid #cccccc;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: none;
 }
 
 /* Group selector */
@@ -109,17 +117,23 @@ th {
 }
 
 /* Button-like link */
-.button-link {
-    background-color: #1f3c88;
+.button-link,
+input[type="submit"] {
+    display: inline-block;
+    background-color: #2c6e91;
     color: white;
-    padding: 10px 14px;
+    padding: 12px 20px;
     text-decoration: none;
-    border: 1px solid #1f3c88;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.button-link:hover {
-    background-color: #ffd447;
-    color: #1f3c88;
+.button-link:hover,
+input[type="submit"]:hover {
+    background-color: #1f5a78;
+    color: white;
 }
 
 /* Form styling */
