@@ -93,7 +93,7 @@ function loadQuizQuestion() {
                     let inputId = "q" + questionNumber + option.value;
 
                     questionHtml += '<input type="radio" id="' + inputId + '" name="q' + questionNumber + '" value="' + option.value + '" onclick="markQuizStarted()">';
-                    
+
                     let optionText = option.text;
 
                     if (
@@ -146,6 +146,7 @@ function fetchRewardContent() {
 function gradeSampleQuiz() {
     let score = 0;
     let answeredQuestions = 0;
+    let unansweredQuestions = [];
 
     for (let questionIndex = 0; questionIndex < loadedQuestions.length; questionIndex++) {
         let questionNumber = questionIndex + 1;
@@ -160,6 +161,8 @@ function gradeSampleQuiz() {
 
         if (selectedAnswer !== "") {
             answeredQuestions += 1;
+        } else {
+            unansweredQuestions.push(questionNumber);
         }
 
         if (selectedAnswer === loadedQuestions[questionIndex].correctAnswer) {
@@ -167,11 +170,14 @@ function gradeSampleQuiz() {
         }
     }
 
-    if (answeredQuestions < loadedQuestions.length) {
-        document.getElementById("quiz-result").innerHTML = "Please answer all questions before submitting the quiz.";
-        document.getElementById("quiz-reward").innerHTML = "Reward content will appear here if you pass.";
-        return;
-    }
+    if (unansweredQuestions.length > 0) {
+        alert("Please answer all questions before submitting.\nUnanswered questions: " + unansweredQuestions.join(", "));
+        document.getElementById("quiz-result").innerHTML =
+            "Please complete all questions before submitting the quiz.";
+        document.getElementById("quiz-reward").innerHTML =
+            "Reward content will appear here if you pass.";
+    return;
+}
 
     let totalQuestions = loadedQuestions.length;
     let percentage = (score / totalQuestions) * 100;
