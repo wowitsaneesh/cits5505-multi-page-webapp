@@ -177,7 +177,7 @@ function gradeSampleQuiz() {
         document.getElementById("quiz-reward").innerHTML =
             "Reward content will appear here if you pass.";
     return;
-}
+    }
 
     let totalQuestions = loadedQuestions.length;
     let percentage = (score / totalQuestions) * 100;
