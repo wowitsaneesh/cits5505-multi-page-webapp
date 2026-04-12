@@ -30,48 +30,46 @@
                 <h2>Introduction</h2>
                 <p>
                     This tutorial introduces the three core technologies used in front-end web development:
-                    HTML, CSS, and JavaScript. Together, these technologies allow developers to create websites
-                    that are structured properly, visually clear, and interactive for users.
+                    HTML, CSS, and JavaScript. These three technologies work together to create webpages that
+                    are structured correctly, styled clearly, and made interactive for users.
                 </p>
                 <p>
-                    HTML provides the structure and meaning of the content on a webpage. CSS controls how that
-                    content looks, including layout, colour, spacing, and fonts. JavaScript adds behaviour and
-                    interactivity, allowing pages to respond to user actions and update dynamically in the browser.
+                    HTML provides the structure of a webpage. CSS controls how the page looks. JavaScript adds
+                    behaviour and interactivity. By the end of this page, you should understand the basic ideas
+                    needed to answer the quiz questions on the next page.
                 </p>
                 <p>
-                    A successful webpage normally requires all three technologies to work together. For example,
-                    a quiz page may use HTML to define the form, CSS to improve the presentation, and JavaScript
-                    to check answers, calculate scores, and update the displayed result.
+                    In simple terms, HTML tells the browser what the content is, CSS tells the browser how the
+                    content should look, and JavaScript tells the browser how the page should respond when the
+                    user clicks, types, or interacts with something.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>HTML Fundamentals</h2>
                 <p>
-                    HTML stands for Hyper Text Markup Language. It is used to structure content on a webpage so
-                    the browser knows what each part of the page represents. HTML is not mainly responsible for
-                    appearance or behaviour. Instead, it provides the backbone of the page.
+                    HTML stands for Hyper Text Markup Language. It is used to build the structure of a webpage.
+                    HTML uses tags to mark different types of content, such as headings, paragraphs, images, and links.
                 </p>
 
-                <h3>Common HTML Tags</h3>
+                <h3>Important HTML Tags</h3>
                 <ul>
-                    <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
-                    <li><code>&lt;p&gt;</code> for paragraphs</li>
-                    <li><code>&lt;a&gt;</code> for hyperlinks</li>
-                    <li><code>&lt;img&gt;</code> for images</li>
-                    <li><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> for lists</li>
-                    <li><code>&lt;form&gt;</code> and <code>&lt;input&gt;</code> for forms</li>
+                    <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> are used for headings</li>
+                    <li><code>&lt;p&gt;</code> is used to create a paragraph</li>
+                    <li><code>&lt;img&gt;</code> is used to insert an image into a webpage</li>
+                    <li><code>&lt;a&gt;</code> is used to create a hyperlink</li>
                 </ul>
 
                 <h3>Example HTML Code</h3>
                 <pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
 &lt;p&gt;This is a paragraph on the page.&lt;/p&gt;
-&lt;a href="quiz.html"&gt;Go to the quiz&lt;/a&gt;</code></pre>
+&lt;a href="quiz.html"&gt;Go to the quiz&lt;/a&gt;
+&lt;img src="images/dawg.jpg" alt="Example image"&gt;</code></pre>
 
                 <p>
-                    In the example above, the heading gives the page a clear title, the paragraph presents
-                    information, and the hyperlink allows the user to move to another page. This shows how
-                    HTML connects structure and navigation.
+                    The code above shows four useful HTML elements. The heading gives the page a title, the
+                    paragraph displays a block of text, the hyperlink lets the user move to another page, and
+                    the image tag displays a picture. These are some of the most common building blocks of a webpage.
                 </p>
             </section>
 
@@ -79,55 +77,78 @@
                 <h2>CSS Fundamentals</h2>
                 <p>
                     CSS stands for Cascading Style Sheets. It is used to control the appearance of a webpage.
-                    While HTML gives the page structure, CSS makes the page visually appealing and easier to read.
+                    While HTML provides structure, CSS changes the visual presentation, including colours,
+                    spacing, fonts, borders, and layout.
                 </p>
 
-                <h3>What CSS Can Control</h3>
+                <h3>What CSS Does</h3>
                 <ol>
-                    <li>Text colour and background colour</li>
-                    <li>Spacing, margins, and padding</li>
-                    <li>Font size and style</li>
-                    <li>Page layout and positioning</li>
-                    <li>Responsive presentation across different screen sizes</li>
+                    <li>Changes colours and backgrounds</li>
+                    <li>Controls spacing such as margin and padding</li>
+                    <li>Changes font size, font weight, and text style</li>
+                    <li>Improves layout and visual organisation</li>
+                    <li>Helps pages look cleaner and easier to read</li>
                 </ol>
 
+                <h3>Useful CSS Selectors</h3>
+                <ul>
+                    <li><code>p</code> selects all paragraph elements</li>
+                    <li><code>#main-header</code> selects the element with the id <code>main-header</code></li>
+                    <li><code>.container</code> selects elements with the class <code>container</code></li>
+                </ul>
+
                 <h3>Example CSS Code</h3>
-                <pre><code>p {
-    color: blue;
-    font-size: 18px;
+                <pre><code>#main-header {
+    background-color: blue;
+}
+
+p {
+    color: black;
+}
+
+.container {
+    padding: 20px;
 }</code></pre>
 
                 <p>
-                    This CSS rule applies styling to all paragraph elements. It changes the text colour to blue
-                    and increases the font size. CSS works by selecting HTML elements and applying style rules
-                    to them.
+                    In the example above, <code>#main-header</code> is an id selector. It targets one specific
+                    element whose id is <code>main-header</code>. The selector <code>.container</code> is a class
+                    selector. In Bootstrap, <code>.container</code> is commonly used to keep page content centred
+                    and spaced neatly across different screen sizes.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>JavaScript Fundamentals</h2>
                 <p>
-                    JavaScript is used to add behaviour and interactivity to webpages. It allows the page to
-                    respond when a user clicks a button, enters text, submits a form, or loads the page. It can
-                    also change the content of the page without needing to reload it fully.
+                    JavaScript is used to add behaviour and interactivity to webpages. Without JavaScript, a page
+                    is usually mostly static. With JavaScript, the page can respond when users click buttons,
+                    enter information, submit forms, or trigger browser events.
                 </p>
 
-                <h3>Common Uses of JavaScript</h3>
+                <h3>What JavaScript Is Used For</h3>
                 <ul>
-                    <li>Showing messages and alerts</li>
-                    <li>Reading user input</li>
-                    <li>Changing text on the page dynamically</li>
-                    <li>Checking quiz answers</li>
-                    <li>Loading data from a file or API</li>
+                    <li>Showing alerts and popup messages</li>
+                    <li>Asking the user for input with <code>prompt()</code></li>
+                    <li>Changing page content dynamically</li>
+                    <li>Checking quiz answers and calculating scores</li>
+                    <li>Loading data and saving information in the browser</li>
                 </ul>
 
                 <h3>Example JavaScript Code</h3>
-                <pre><code>alert("Welcome to JavaScript!");</code></pre>
+                <pre><code>alert("Welcome to JavaScript!");
+let userName = prompt("What is your name?");
+localStorage.setItem("name", userName);</code></pre>
 
                 <p>
-                    This example shows a simple JavaScript instruction that displays a popup message to the user.
-                    JavaScript can be much more powerful than this, but even basic commands help demonstrate how
-                    a webpage can become interactive instead of remaining static.
+                    The function <code>alert()</code> shows a popup message. The function <code>prompt()</code>
+                    asks the user to type in some input. The browser feature <code>localStorage</code> can be used
+                    to save small pieces of information on the client side, such as quiz attempts, names, or settings.
+                </p>
+                <p>
+                    In this project, JavaScript is what makes the quiz interactive. It checks answers, shows the
+                    score, displays whether the user passed, stores previous attempts, and loads question data
+                    dynamically from a file.
                 </p>
             </section>
 
@@ -142,17 +163,17 @@
                     <tr>
                         <td>HTML</td>
                         <td>Structure</td>
-                        <td>Headings, paragraphs, links, forms</td>
+                        <td><code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code></td>
                     </tr>
                     <tr>
                         <td>CSS</td>
                         <td>Presentation</td>
-                        <td>Colours, spacing, fonts, layout</td>
+                        <td><code>#main-header</code>, <code>.container</code>, colours and spacing</td>
                     </tr>
                     <tr>
                         <td>JavaScript</td>
                         <td>Interactivity</td>
-                        <td>Quiz logic, dynamic updates, browser responses</td>
+                        <td><code>prompt()</code>, quiz logic, <code>localStorage</code></td>
                     </tr>
                 </table>
             </section>
@@ -161,17 +182,16 @@
                 <h2>Example Image</h2>
                 <img src="images/dawg.jpg" alt="Illustration representing web development" class="feature-image">
                 <p>
-                    This image is included as a simple example of how visual content can be added to a webpage
-                    using HTML. Images often help improve presentation and make content more engaging for users.
+                    This image is included as a reminder that the HTML tag <code>&lt;img&gt;</code> is used to
+                    insert images into a webpage. Images help make pages more engaging and visually appealing.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>Interactive JavaScript Demo</h2>
                 <p>
-                    The buttons below demonstrate how JavaScript can respond to user actions in the browser.
-                    These examples show simple interactions such as displaying a welcome message, collecting
-                    input from the user, and performing a basic calculation.
+                    The buttons below show simple JavaScript interactions. They demonstrate that JavaScript can
+                    display messages, ask the user for input, and perform small tasks in the browser.
                 </p>
 
                 <p>
@@ -198,8 +218,10 @@
             <section class="content-section action-section">
                 <h2>Next Step</h2>
                 <p>
-                    Once you finish reading the tutorial and reviewing the examples, you can move directly to the
-                    quiz page to test your understanding of HTML, CSS, and JavaScript.
+                    You have now reviewed the main ideas needed for the quiz: what HTML stands for, what important
+                    HTML tags do, what CSS is used for, what selectors like <code>#main-header</code> and
+                    <code>.container</code> mean, what JavaScript does, what <code>prompt()</code> is used for,
+                    and how <code>localStorage</code> can save quiz attempts.
                 </p>
                 <p>
                     <a href="quiz.html" class="btn btn-primary">
