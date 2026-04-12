@@ -163,7 +163,7 @@ th, td {
     border-radius: 14px;
     border: 3px solid #dbeafe;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    margin: 14px auto 10px auto;
+    margin: 14px auto 0 auto;
 }
 
 .profile-image {
