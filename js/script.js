@@ -112,11 +112,32 @@ function setCssDemoMaroon() {
     console.log("CSS demo changed to maroon.");
 }
 
-// Displays a simple career goal message on the CV page.
-function showCareerGoal() {
-    let careerGoal = "My career goal is to become a skilled web developer who builds useful and user-friendly websites.";
-    document.getElementById("cv-output").innerHTML = careerGoal;
-    console.log("Career goal displayed.");
+// Displays a software developer profile summary on the CV page.
+function showSoftwareDeveloper() {
+    let roleText = "Software Developer: I enjoy building structured, interactive, and user-focused digital solutions. My recent work includes developing a multi-page web application using HTML, CSS, Bootstrap, JavaScript, AJAX, JSON, browser local storage, and public API integration. I am particularly interested in software roles that combine problem solving, application development, and continuous technical learning.";
+    document.getElementById("cv-output").innerHTML = roleText;
+    console.log("Software Developer profile displayed.");
+}
+
+// Displays a data analyst profile summary on the CV page.
+function showDataAnalyst() {
+    let roleText = "Data Analyst: I have professional experience in reporting, dashboard thinking, business analysis, and performance monitoring. My background includes writing queries, building reports, analysing growth metrics, and supporting decision making through data. I am comfortable working with structured information to identify trends, improve processes, and communicate insights clearly.";
+    document.getElementById("cv-output").innerHTML = roleText;
+    console.log("Data Analyst profile displayed.");
+}
+
+// Displays a product manager profile summary on the CV page.
+function showProductManager() {
+    let roleText = "Product Manager: I am interested in roles that sit at the intersection of technology, business needs, and user experience. My project and work experience have required me to interpret requirements, prioritise practical improvements, refine solutions through feedback, and think about how digital systems should serve real users. This has helped me develop a product-oriented mindset alongside technical skills.";
+    document.getElementById("cv-output").innerHTML = roleText;
+    console.log("Product Manager profile displayed.");
+}
+
+// Displays a business consultant profile summary on the CV page.
+function showBusinessConsultant() {
+    let roleText = "Business Consultant: My previous experience includes commercial analysis, strategic planning, growth support, stakeholder coordination, and problem solving in fast-moving business environments. I have worked on revenue growth, reporting, campaign performance, and operational improvement, which has strengthened my ability to connect analytical thinking with business outcomes.";
+    document.getElementById("cv-output").innerHTML = roleText;
+    console.log("Business Consultant profile displayed.");
 }
 
 // Randomises the order of questions in the array.
