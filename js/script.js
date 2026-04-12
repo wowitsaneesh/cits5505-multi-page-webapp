@@ -36,6 +36,27 @@ function showAdditionResult() {
     console.log("Calculation result shown: " + total);
 }
 
+// Shows a simple HTML example on the tutorial page.
+function showHtmlDemo() {
+    document.getElementById("html-demo-output").innerHTML =
+        "HTML uses tags such as &lt;h1&gt; for headings, &lt;p&gt; for paragraphs, &lt;a&gt; for links, and &lt;img&gt; for images.";
+    console.log("HTML demo shown.");
+}
+
+// Shows a simple CSS colour example on the tutorial page.
+function showCssColorDemo() {
+    document.getElementById("css-demo-output").innerHTML =
+        "CSS can change the appearance of content. For example, a paragraph can be made blue or a header can be given a background colour.";
+    console.log("CSS colour demo shown.");
+}
+
+// Shows a simple CSS selector example on the tutorial page.
+function showCssSelectorDemo() {
+    document.getElementById("css-demo-output").innerHTML =
+        "CSS selectors target elements. For example, #main-header selects an element by id, while .container selects elements by class.";
+    console.log("CSS selector demo shown.");
+}
+
 // Displays a simple career goal message on the CV page.
 function showCareerGoal() {
     let careerGoal = "My career goal is to become a skilled web developer who builds useful and user-friendly websites.";
@@ -176,7 +197,7 @@ function gradeSampleQuiz() {
             "Please complete all questions before submitting the quiz.";
         document.getElementById("quiz-reward").innerHTML =
             "Reward content will appear here if you pass.";
-    return;
+        return;
     }
 
     let totalQuestions = loadedQuestions.length;
