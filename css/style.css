@@ -267,13 +267,47 @@ input[type="radio"] + label {
 #cv-output,
 #quiz-result,
 #quiz-reward,
-#quiz-history {
+#quiz-history,
+#html-demo-output,
+#css-demo-output {
     background: #f8fbff;
     border: 1px solid #dbeafe;
     border-radius: 12px;
     padding: 14px 16px;
     margin-top: 14px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* CSS live demo section */
+.css-demo-section {
+    background: #ffffff;
+}
+
+.css-live-box {
+    background-color: #f3f6fb;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    min-height: 180px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#css-live-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 35px 0;
+}
+
+.css-demo-buttons {
+    text-align: left;
+}
+
+.css-demo-buttons .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* Footer */

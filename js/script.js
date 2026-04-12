@@ -43,18 +43,40 @@ function showHtmlDemo() {
     console.log("HTML demo shown.");
 }
 
-// Shows a simple CSS colour example on the tutorial page.
-function showCssColorDemo() {
+// Sets the CSS demo box to red.
+function setCssDemoRed() {
+    document.getElementById("css-live-box").style.backgroundColor = "#d94b4b";
+    document.getElementById("css-live-text").style.color = "white";
     document.getElementById("css-demo-output").innerHTML =
-        "CSS can change the appearance of content. For example, a paragraph can be made blue or a header can be given a background colour.";
-    console.log("CSS colour demo shown.");
+        "The box is now red. This shows that CSS can change background colour and text colour.";
+    console.log("CSS demo changed to red.");
 }
 
-// Shows a simple CSS selector example on the tutorial page.
-function showCssSelectorDemo() {
+// Sets the CSS demo box to gold.
+function setCssDemoGold() {
+    document.getElementById("css-live-box").style.backgroundColor = "#d4af37";
+    document.getElementById("css-live-text").style.color = "#1f2937";
     document.getElementById("css-demo-output").innerHTML =
-        "CSS selectors target elements. For example, #main-header selects an element by id, while .container selects elements by class.";
-    console.log("CSS selector demo shown.");
+        "The box is now gold. CSS can be used to create strong visual contrast.";
+    console.log("CSS demo changed to gold.");
+}
+
+// Sets the CSS demo box to brown.
+function setCssDemoBrown() {
+    document.getElementById("css-live-box").style.backgroundColor = "#8b5a2b";
+    document.getElementById("css-live-text").style.color = "white";
+    document.getElementById("css-demo-output").innerHTML =
+        "The box is now brown. CSS can change the presentation without changing the HTML structure.";
+    console.log("CSS demo changed to brown.");
+}
+
+// Sets the CSS demo box to maroon.
+function setCssDemoMaroon() {
+    document.getElementById("css-live-box").style.backgroundColor = "#6b1f2a";
+    document.getElementById("css-live-text").style.color = "white";
+    document.getElementById("css-demo-output").innerHTML =
+        "The box is now maroon. This demonstrates how CSS styling can be updated dynamically.";
+    console.log("CSS demo changed to maroon.");
 }
 
 // Displays a simple career goal message on the CV page.

@@ -155,23 +155,21 @@
                 </p>
             </section>
 
-            <section class="content-section">
-                <h2>Interactive CSS Demo</h2>
+            <section class="content-section css-demo-section">
+                <h2>Interactive Demo: Live Colour Changer</h2>
                 <p>
-                    CSS changes how a webpage looks. The buttons below simulate simple styling changes so you can
-                    see how colour and emphasis can alter the presentation of text without changing its meaning.
+                    Click the buttons below to see how CSS-style presentation can be updated dynamically.
                 </p>
 
-                <p>
-                    <button type="button" class="btn btn-default" onclick="showCssColorDemo()">
-                        Show CSS Colour Example
-                    </button>
-                </p>
+                <div id="css-live-box" class="css-live-box">
+                    <p id="css-live-text">This box will change colour.</p>
+                </div>
 
-                <p>
-                    <button type="button" class="btn btn-default" onclick="showCssSelectorDemo()">
-                        Show CSS Selector Example
-                    </button>
+                <p class="css-demo-buttons">
+                    <button type="button" class="btn btn-default" onclick="setCssDemoRed()">Red</button>
+                    <button type="button" class="btn btn-default" onclick="setCssDemoGold()">Gold</button>
+                    <button type="button" class="btn btn-default" onclick="setCssDemoBrown()">Brown</button>
+                    <button type="button" class="btn btn-default" onclick="setCssDemoMaroon()">Maroon</button>
                 </p>
 
                 <p id="css-demo-output">CSS demo output will appear here.</p>
