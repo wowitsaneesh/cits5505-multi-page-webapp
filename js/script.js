@@ -223,6 +223,8 @@ function gradeSampleQuiz() {
     let score = 0;
     let answeredQuestions = 0;
     let unansweredQuestions = [];
+    let correctQuestions = [];
+    let wrongQuestions = [];
 
     for (let questionIndex = 0; questionIndex < loadedQuestions.length; questionIndex++) {
         let questionNumber = questionIndex + 1;
@@ -243,6 +245,9 @@ function gradeSampleQuiz() {
 
         if (selectedAnswer === loadedQuestions[questionIndex].correctAnswer) {
             score += 1;
+            correctQuestions.push(questionNumber);
+        } else if (selectedAnswer !== "") {
+            wrongQuestions.push(questionNumber);
         }
     }
 
@@ -261,12 +266,15 @@ function gradeSampleQuiz() {
     let resultText = "";
 
     if (percentage >= passMark) {
-        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You passed!";
+        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You passed!<br>";
         fetchRewardContent();
     } else {
-        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You did not pass.";
+        resultText = "You scored " + score + " out of " + totalQuestions + " (" + percentage.toFixed(0) + "%). You did not pass.<br>";
         document.getElementById("quiz-reward").innerHTML = "No reward this time. Try again to pass the quiz.";
     }
+
+    resultText += "Correct questions: " + correctQuestions.join(", ") + "<br>";
+    resultText += "Wrong questions: " + wrongQuestions.join(", ");
 
     document.getElementById("quiz-result").innerHTML = resultText;
 
