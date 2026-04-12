@@ -30,33 +30,52 @@
             <section class="content-section">
                 <h2>Introduction</h2>
                 <p>
-                    This tutorial explains the three core technologies used in front-end web development:
-                    HTML, CSS, and JavaScript. These technologies work together to create webpages that are
-                    structured properly, styled clearly, and made interactive for users.
+                    Websites may look like one complete product when we open them in a browser, but they are usually
+                    built using three different technologies working together: HTML, CSS, and JavaScript. Each one has
+                    its own role. If you understand the role of each technology, it becomes much easier to understand
+                    how webpages are built and why different parts of a website behave the way they do.
                 </p>
                 <p>
-                    HTML provides the structure of a webpage. CSS controls how that structure looks. JavaScript
-                    adds behaviour so that the page can respond to the user. A modern webpage usually uses all
-                    three at the same time.
+                    HTML is used to create the structure of a webpage. It tells the browser what the content is.
+                    For example, HTML can tell the browser that one line is a heading, another part is a paragraph,
+                    another item is a link, and another item is an image. CSS is used to control presentation. It
+                    changes how the structured HTML content looks, including colours, spacing, fonts, borders, and layout.
+                    JavaScript adds behaviour and interactivity. It allows the webpage to react when the user clicks,
+                    types, submits a form, or triggers some other event.
                 </p>
                 <p>
-                    For example, a quiz page may use HTML to create the form and questions, CSS to improve the
-                    design and readability, and JavaScript to load questions, check answers, calculate the score,
-                    and update the result without reloading the page.
+                    You can think of these three technologies in a simple way. HTML is the structure, CSS is the
+                    style, and JavaScript is the behaviour. A useful comparison is a house: HTML is like the walls,
+                    doors, and rooms; CSS is like the paint, decorations, and furniture arrangement; JavaScript is
+                    like the electrical systems and moving parts that make things respond and work dynamically.
+                </p>
+                <p>
+                    In this project, all three are used together. HTML creates the tutorial page, quiz page, reflection
+                    page, and CV page. CSS gives the website its visual identity and readable layout. JavaScript powers
+                    the quiz, checks answers, shows feedback, stores attempts, and makes the page interactive. By the
+                    end of this tutorial, you should understand the main ideas clearly enough to answer the quiz.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>HTML Fundamentals</h2>
                 <p>
-                    HTML stands for Hyper Text Markup Language. It is used to structure the content of a webpage.
-                    The browser reads HTML tags and uses them to understand what each part of the page represents.
-                    HTML is mainly about meaning and structure, not visual styling.
+                    HTML stands for Hyper Text Markup Language. It is the standard language used to structure content on
+                    a webpage. The word “markup” means that HTML marks different parts of content so the browser knows
+                    what they represent. HTML does not mainly control colours, animations, or advanced visual appearance.
+                    Instead, its main job is to organise the content into meaningful parts.
                 </p>
                 <p>
-                    For example, headings tell the browser that a piece of text is a title or subheading.
-                    Paragraph tags mark normal blocks of text. Link tags create clickable navigation. Image tags
-                    display pictures. These elements help organise the page clearly for both users and browsers.
+                    For example, when you see a large page title at the top of a website, that is usually written using
+                    a heading tag in HTML. When you see a normal block of writing, that is usually written using a paragraph
+                    tag. When you click text that takes you to another page, that is created using a hyperlink tag. When you
+                    see a picture on the screen, that is placed into the page using an image tag.
+                </p>
+                <p>
+                    This is important because browsers do not just display text randomly. They interpret HTML tags and use
+                    them to decide how content should be organised. Search engines, accessibility tools, and screen readers
+                    also depend on this structure. So good HTML makes a page not only visible, but also understandable and
+                    usable.
                 </p>
 
                 <h3>Common HTML Tags</h3>
@@ -68,13 +87,23 @@
                     <li><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> are used for lists</li>
                 </ul>
 
+                <p>
+                    Heading tags are used for titles and section names. <code>&lt;h1&gt;</code> is usually the main heading
+                    of the page and is normally the most important and largest heading. <code>&lt;h2&gt;</code> is commonly
+                    used for section headings, and <code>&lt;h3&gt;</code> can be used for smaller subheadings inside a section.
+                    Paragraph tags are used for normal written explanations. Hyperlink tags allow users to move to other pages
+                    or websites. Image tags display pictures. List tags help organise related points in a clear way.
+                </p>
+
                 <h3>HTML Example 1</h3>
                 <pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
 &lt;p&gt;This is a paragraph on the page.&lt;/p&gt;</code></pre>
 
                 <p>
-                    In this example, the heading provides a main title, while the paragraph gives supporting
-                    information underneath it. This is a simple example of page structure.
+                    In this example, the first line creates a main heading. This tells the browser that “Welcome” is not just
+                    normal text, but an important title. The second line creates a paragraph. This tells the browser that the
+                    sentence is part of the main body content. Even though the example is small, it shows the basic idea of HTML:
+                    it gives structure and meaning to text.
                 </p>
 
                 <h3>HTML Example 2</h3>
@@ -82,9 +111,17 @@
 &lt;img src="images/dawg.jpg" alt="Example image"&gt;</code></pre>
 
                 <p>
-                    The first line creates a clickable link to another page. The second line inserts an image
-                    into the webpage. The <code>alt</code> attribute gives alternative text, which is important
-                    for accessibility and for cases where the image cannot load.
+                    The first line creates a hyperlink. The part inside <code>href</code> tells the browser where the link
+                    should go when clicked. In this case, it points to the quiz page. The second line inserts an image.
+                    The <code>src</code> attribute tells the browser where to find the image file, and the <code>alt</code>
+                    attribute gives alternative text. This alternative text is useful if the image cannot load, and it is also
+                    important for accessibility tools such as screen readers.
+                </p>
+                <p>
+                    So, when you are asked which HTML tag is used for a paragraph, the answer is <code>&lt;p&gt;</code>.
+                    When you are asked which tag inserts an image, the answer is <code>&lt;img&gt;</code>. When you are
+                    asked which element creates a hyperlink, the answer is <code>&lt;a&gt;</code>. These are basic but
+                    essential HTML ideas.
                 </p>
             </section>
 
@@ -92,7 +129,13 @@
                 <h2>Interactive HTML Demo</h2>
                 <p>
                     Click the buttons below to preview how different HTML tags affect text structure and size.
-                    Headings appear larger and stronger, while a paragraph appears as normal body text.
+                    Headings appear larger and stronger because heading tags are used for titles and section names.
+                    A paragraph appears as normal body text because the paragraph tag is used for regular written content.
+                </p>
+                <p>
+                    This demo helps show that HTML is not mainly about decoration. Instead, it helps define what the content
+                    is. A heading means “this is a title or section name,” while a paragraph means “this is standard written
+                    information.” The browser then displays those elements differently because they have different meaning.
                 </p>
 
                 <p class="html-demo-buttons">
@@ -112,16 +155,21 @@
             <section class="content-section">
                 <h2>CSS Fundamentals</h2>
                 <p>
-                    CSS stands for Cascading Style Sheets. It is used to control the appearance of a webpage.
-                    While HTML provides the structure, CSS changes the visual presentation of that structure.
-                    CSS can change colours, spacing, fonts, borders, and layout.
+                    CSS stands for Cascading Style Sheets. It is used to control how a webpage looks. While HTML gives the
+                    page structure, CSS changes the presentation of that structure. This includes things like text colour,
+                    background colour, spacing, font size, borders, width, alignment, and layout.
                 </p>
                 <p>
-                    CSS works by selecting HTML elements and applying style rules to them. A selector can target
-                    an element by tag name, by class, or by id. For example, <code>p</code> targets all
-                    paragraph elements, <code>.container</code> targets elements with the class
-                    <code>container</code>, and <code>#main-header</code> targets the element whose id is
-                    <code>main-header</code>.
+                    Without CSS, a webpage can still work, but it often looks very plain. CSS is what helps turn plain
+                    structure into a cleaner, more attractive, and more readable design. For example, CSS can make a header
+                    blue, add padding around a section, change a button colour, round the corners of a box, or make text
+                    easier to read.
+                </p>
+                <p>
+                    CSS works by using selectors. A selector tells the browser which HTML elements should receive a particular
+                    style rule. After the selector, CSS uses braces and property-value pairs. A property is the thing you want
+                    to change, such as <code>color</code> or <code>font-size</code>. The value is the setting you want to
+                    apply, such as <code>blue</code> or <code>18px</code>.
                 </p>
 
                 <h3>What CSS Can Control</h3>
@@ -133,6 +181,13 @@
                     <li>Layout and alignment of content</li>
                 </ol>
 
+                <p>
+                    Text colour changes the colour of written content. Background colour changes the colour behind an element.
+                    Padding adds space inside an element, between its border and content. Margin adds space outside an element,
+                    separating it from nearby elements. Font size changes how large the text appears. Borders create visible edges
+                    around elements. Layout rules help organise where items appear on the page.
+                </p>
+
                 <h3>CSS Example 1</h3>
                 <pre><code>p {
     color: blue;
@@ -140,8 +195,9 @@
 }</code></pre>
 
                 <p>
-                    This CSS rule changes the text colour of every paragraph to blue and makes the text larger.
-                    This shows how one CSS rule can affect all matching elements.
+                    This example selects all paragraph elements using the selector <code>p</code>. It then changes the text
+                    colour to blue and makes the paragraph text larger by setting the font size to 18 pixels. This shows that
+                    CSS can apply the same style to every matching element at once.
                 </p>
 
                 <h3>CSS Example 2</h3>
@@ -154,16 +210,33 @@
 }</code></pre>
 
                 <p>
-                    The selector <code>#main-header</code> is an id selector. It targets one specific element
-                    with that id. The selector <code>.container</code> is a class selector. In Bootstrap,
-                    <code>.container</code> is commonly used to keep page content centred and spaced neatly.
+                    The selector <code>#main-header</code> is an id selector. The <code>#</code> symbol means that CSS is
+                    targeting one specific element whose id is <code>main-header</code>. In this case, the rule changes its
+                    background colour to blue.
+                </p>
+                <p>
+                    The selector <code>.container</code> is a class selector. The <code>.</code> symbol means CSS is targeting
+                    elements that use the class name <code>container</code>. In Bootstrap, <code>.container</code> is a very
+                    common class because it helps keep page content centred and spaced neatly across the screen.
+                </p>
+                <p>
+                    So, if you are asked what the main purpose of CSS is, the answer is that CSS controls the style and appearance
+                    of a webpage. If you are asked which selector targets an element with id <code>main-header</code>, the answer
+                    is <code>#main-header</code>. If you are asked which Bootstrap class commonly keeps page content centred with
+                    responsive spacing, the answer is <code>.container</code>.
                 </p>
             </section>
 
             <section class="content-section css-demo-section">
                 <h2>Interactive Demo: Live Colour Changer</h2>
                 <p>
-                    Click the buttons below to see how CSS-style presentation can be updated dynamically.
+                    Click the buttons below to see how CSS-style presentation can be updated dynamically. The structure of the
+                    box stays the same, but its visual appearance changes. This helps show the difference between HTML structure
+                    and CSS presentation.
+                </p>
+                <p>
+                    When you press a button, JavaScript changes CSS-related properties such as background colour and text colour.
+                    This demonstrates that presentation can be updated without rewriting the actual page content.
                 </p>
 
                 <div id="css-live-box" class="css-live-box">
@@ -183,14 +256,19 @@
             <section class="content-section">
                 <h2>JavaScript Fundamentals</h2>
                 <p>
-                    JavaScript is used to add behaviour and interactivity to webpages. Without JavaScript, a page
-                    is mostly static. With JavaScript, the page can react when a user clicks a button, enters text,
-                    submits a form, or interacts with the page in some other way.
+                    JavaScript is used to add behaviour and interactivity to webpages. Without JavaScript, a page is usually
+                    mostly static, which means it can display information but cannot do very much in response to the user.
+                    With JavaScript, the page can react when a user clicks a button, types into a field, submits a form,
+                    or interacts with the page in some other way.
                 </p>
                 <p>
-                    JavaScript can also change the content already on the page. It can show alerts, ask the user
-                    for input, calculate results, store data in the browser, and load information from files or
-                    APIs. In this project, JavaScript is what makes the quiz interactive.
+                    JavaScript can also change content that is already on the page. For example, it can show popup messages,
+                    ask the user to type something, perform calculations, change text inside a section, save information in
+                    the browser, or load data from another file. In this project, JavaScript is what makes the quiz interactive.
+                </p>
+                <p>
+                    This means JavaScript is not mainly used for structure or pure styling. Its main role is behaviour. It is
+                    what allows a webpage to do something instead of only displaying information.
                 </p>
 
                 <h3>Common JavaScript Uses</h3>
@@ -202,12 +280,19 @@
                     <li>Updating page content dynamically</li>
                 </ul>
 
+                <p>
+                    The function <code>alert()</code> displays a popup message. The function <code>prompt()</code> asks the user
+                    to enter some input. The function <code>console.log()</code> prints information to the browser console, which
+                    is useful during testing and debugging. The feature <code>localStorage</code> saves small pieces of data in the
+                    browser so they can still be available later.
+                </p>
+
                 <h3>JavaScript Example 1</h3>
                 <pre><code>alert("Welcome to JavaScript!");</code></pre>
 
                 <p>
-                    This line shows a popup message to the user. It is one of the simplest examples of JavaScript
-                    interactivity.
+                    This line shows a popup message to the user. It is one of the simplest examples of JavaScript interactivity.
+                    Nothing on the page structure changes, but the browser responds by displaying a message box.
                 </p>
 
                 <h3>JavaScript Example 2</h3>
@@ -215,18 +300,27 @@
 localStorage.setItem("name", userName);</code></pre>
 
                 <p>
-                    The function <code>prompt()</code> asks the user to type in some input. The feature
-                    <code>localStorage</code> can then save small pieces of information inside the browser,
-                    such as quiz attempts or user preferences.
+                    In the first line, <code>prompt()</code> asks the user to type something. In the second line,
+                    <code>localStorage</code> saves that value in the browser. In this project, the same browser storage idea is
+                    used to save quiz attempts on the client side.
+                </p>
+                <p>
+                    So, if you are asked what JavaScript is mainly used for, the answer is adding behaviour and interactivity.
+                    If you are asked which function can ask the user to type something, the answer is <code>prompt()</code>.
+                    If you are asked which browser feature can save quiz attempts on the client side, the answer is
+                    <code>localStorage</code>.
                 </p>
             </section>
 
             <section class="content-section">
                 <h2>Interactive JavaScript Demo</h2>
                 <p>
-                    The buttons below demonstrate how JavaScript can respond to user actions in the browser.
-                    These examples show simple interactions such as displaying a welcome message, collecting
-                    input from the user, and performing a basic calculation.
+                    The buttons below demonstrate how JavaScript can respond to user actions in the browser. These examples show
+                    three common ideas: displaying a message, collecting input, and performing a simple calculation.
+                </p>
+                <p>
+                    This section is useful because it shows that JavaScript is not just theory. It can actively respond to the
+                    user and then update the webpage based on what happened.
                 </p>
 
                 <p>
@@ -274,24 +368,33 @@ localStorage.setItem("name", userName);</code></pre>
                         <td><code>alert()</code>, <code>prompt()</code>, <code>localStorage</code></td>
                     </tr>
                 </table>
+                <p>
+                    This table summarises the most important idea in the tutorial. HTML creates structure. CSS controls appearance.
+                    JavaScript creates interactivity. If you remember this distinction clearly, the rest of the quiz becomes much easier.
+                </p>
             </section>
 
             <section class="content-section">
                 <h2>Example Image</h2>
                 <img src="images/dawg.jpg" alt="Illustration representing web development" class="feature-image">
                 <p>
-                    This image is included as an example of how the HTML tag <code>&lt;img&gt;</code> is used
-                    to place an image on a webpage. Images help make websites more engaging and visually interesting.
+                    This image is included as an example of how the HTML tag <code>&lt;img&gt;</code> is used to place an image
+                    on a webpage. The image itself is visual content, but the way it is inserted into the page comes from HTML.
+                    CSS can then style the image by changing things like width, border, spacing, and alignment.
                 </p>
             </section>
 
             <section class="content-section action-section">
                 <h2>Next Step</h2>
                 <p>
-                    You have now reviewed the main ideas needed for the quiz: what HTML stands for, what important
-                    HTML tags do, what CSS is used for, what selectors like <code>#main-header</code> and
-                    <code>.container</code> mean, what JavaScript does, what <code>prompt()</code> is used for,
-                    and how <code>localStorage</code> can save quiz attempts.
+                    You have now reviewed the main ideas needed for the quiz. You have learned what HTML stands for, what important
+                    HTML tags do, what CSS is used for, how selectors such as <code>#main-header</code> and <code>.container</code>
+                    work, what JavaScript is mainly used for, what <code>prompt()</code> does, and how <code>localStorage</code>
+                    can save quiz attempts.
+                </p>
+                <p>
+                    If any part still feels unfamiliar, scroll back and review the examples again. Once you feel comfortable with
+                    the explanations, examples, and interactive demos, move to the quiz page and test your understanding.
                 </p>
                 <p>
                     <a href="quiz.html" class="btn btn-primary">
