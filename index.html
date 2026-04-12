@@ -90,16 +90,20 @@
             <section class="content-section">
                 <h2>Interactive HTML Demo</h2>
                 <p>
-                    The buttons below help demonstrate what HTML elements do. They do not create new pages, but
-                    they show examples of how HTML tags are used to structure content such as headings, paragraphs,
-                    links, and images.
+                    Click the buttons below to preview how different HTML tags affect text structure and size.
+                    Headings appear larger and stronger, while a paragraph appears as normal body text.
                 </p>
 
-                <p>
-                    <button type="button" class="btn btn-default" onclick="showHtmlDemo()">
-                        Show HTML Example
-                    </button>
+                <p class="html-demo-buttons">
+                    <button type="button" class="btn btn-default" onclick="showHtmlH1Demo()">H1</button>
+                    <button type="button" class="btn btn-default" onclick="showHtmlH2Demo()">H2</button>
+                    <button type="button" class="btn btn-default" onclick="showHtmlH3Demo()">H3</button>
+                    <button type="button" class="btn btn-default" onclick="showHtmlPDemo()">P</button>
                 </p>
+
+                <div id="html-live-box" class="html-live-box">
+                    <p id="html-live-text">Your HTML preview will appear here.</p>
+                </div>
 
                 <p id="html-demo-output">HTML demo output will appear here.</p>
             </section>

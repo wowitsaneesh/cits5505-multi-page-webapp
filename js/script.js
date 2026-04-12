@@ -36,11 +36,44 @@ function showAdditionResult() {
     console.log("Calculation result shown: " + total);
 }
 
-// Shows a simple HTML example on the tutorial page.
-function showHtmlDemo() {
+// Shows H1 preview in the HTML demo.
+function showHtmlH1Demo() {
+    document.getElementById("html-live-text").innerHTML = "This is an H1 heading.";
+    document.getElementById("html-live-text").style.fontSize = "36px";
+    document.getElementById("html-live-text").style.fontWeight = "700";
     document.getElementById("html-demo-output").innerHTML =
-        "HTML uses tags such as &lt;h1&gt; for headings, &lt;p&gt; for paragraphs, &lt;a&gt; for links, and &lt;img&gt; for images.";
-    console.log("HTML demo shown.");
+        "You selected H1. This tag is used for a main heading and appears the largest.";
+    console.log("HTML H1 demo shown.");
+}
+
+// Shows H2 preview in the HTML demo.
+function showHtmlH2Demo() {
+    document.getElementById("html-live-text").innerHTML = "This is an H2 heading.";
+    document.getElementById("html-live-text").style.fontSize = "30px";
+    document.getElementById("html-live-text").style.fontWeight = "700";
+    document.getElementById("html-demo-output").innerHTML =
+        "You selected H2. This tag is used for a section heading and appears smaller than H1.";
+    console.log("HTML H2 demo shown.");
+}
+
+// Shows H3 preview in the HTML demo.
+function showHtmlH3Demo() {
+    document.getElementById("html-live-text").innerHTML = "This is an H3 heading.";
+    document.getElementById("html-live-text").style.fontSize = "24px";
+    document.getElementById("html-live-text").style.fontWeight = "700";
+    document.getElementById("html-demo-output").innerHTML =
+        "You selected H3. This tag is used for a smaller subheading inside a section.";
+    console.log("HTML H3 demo shown.");
+}
+
+// Shows paragraph preview in the HTML demo.
+function showHtmlPDemo() {
+    document.getElementById("html-live-text").innerHTML = "This is a paragraph. Paragraph text is used for normal written content on a webpage.";
+    document.getElementById("html-live-text").style.fontSize = "18px";
+    document.getElementById("html-live-text").style.fontWeight = "400";
+    document.getElementById("html-demo-output").innerHTML =
+        "You selected P. The paragraph tag is used for standard text content.";
+    console.log("HTML paragraph demo shown.");
 }
 
 // Sets the CSS demo box to red.
